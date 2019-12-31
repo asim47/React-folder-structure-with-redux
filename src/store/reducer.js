@@ -1,20 +1,11 @@
-import * as Actions from "./actions"
-
-const initialState = {
-    //all data here
-}
+import { combineReducers } from "redux"
+import authReducer from "./reducers/auth.reducer"
+import userReducer from "./reducers/user.reducer"
 
 
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
 
-        case Actions.GET_DATA:
-            return {
-                ...state,
-            }
-        default:
-            return state;
-    }
-}
+export default combineReducers({
+    authReducer,
+    userReducer
+})
 
-export default reducer
